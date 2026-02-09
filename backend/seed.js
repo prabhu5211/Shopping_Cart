@@ -63,12 +63,12 @@ const seedDatabase = async () => {
       { 
         name: 'Webcam', 
         status: 'active',
-        image: 'https://images.unsplash.com/photo-1587826080692-f439cd0b70da?w=400'
+        image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400'
       },
       { 
         name: 'USB Cable', 
         status: 'active',
-        image: 'https://images.unsplash.com/photo-1625948515291-69613efd103f?w=400'
+        image: 'https://images.unsplash.com/photo-1591290619762-c588f7e8e86f?w=400'
       }
     ]);
     console.log(`Created ${items.length} items with images`);

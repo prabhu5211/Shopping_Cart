@@ -128,7 +128,7 @@ const ItemList = ({ onLogout }) => {
             {items.map((item) => (
               <div
                 key={item._id}
-                onClick={() => handleAddToCart(item._id)}
+                onClick={() => navigate(`/product/${item._id}`)}
                 className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer transform hover:-translate-y-2 overflow-hidden"
               >
                 <div className="relative">
@@ -160,7 +160,7 @@ const ItemList = ({ onLogout }) => {
                   <p className="text-sm text-gray-500 mb-4">Premium Quality Product</p>
                   
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-600 font-medium">Click to add</span>
+                    <span className="text-sm text-gray-600 font-medium">Click to view</span>
                     <div className="bg-indigo-100 p-2 rounded-full group-hover:bg-indigo-600 transition">
                       <ShoppingCart size={18} className="text-indigo-600 group-hover:text-white transition" />
                     </div>

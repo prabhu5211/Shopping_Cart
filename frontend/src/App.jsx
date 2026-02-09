@@ -6,6 +6,7 @@ import Login from './components/Login';
 import ItemList from './components/ItemList';
 import Cart from './components/Cart';
 import Orders from './components/Orders';
+import ProductDetail from './components/ProductDetail';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -55,6 +56,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/items" element={<ItemList onLogout={handleLogout} />} />
+          <Route path="/product/:id" element={<ProductDetail />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/orders" element={<Orders />} />
           <Route path="/" element={<Navigate to="/items" replace />} />
