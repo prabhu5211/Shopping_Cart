@@ -14,7 +14,7 @@ const Login = ({ onLoginSuccess }) => {
     setIsLoading(true);
 
     try {
-      await axios.post('http://localhost:5000/api/users', {
+      await axios.post('https://shopping-cart-br9a.onrender.com/api/users', {
         username,
         password
       });
@@ -41,7 +41,7 @@ const Login = ({ onLoginSuccess }) => {
     setIsLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:5000/api/users/login', {
+      const response = await axios.post('https://shopping-cart-br9a.onrender.com/api/users/login', {
         username,
         password
       });

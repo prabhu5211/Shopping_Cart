@@ -18,7 +18,7 @@ const Cart = () => {
     const token = localStorage.getItem('token');
     
     try {
-      const response = await axios.get('http://localhost:5000/api/carts', {
+      const response = await axios.get('https://shopping-cart-br9a.onrender.com/api/carts', {
         headers: { Authorization: `Bearer ${token}` }
       });
 
@@ -38,7 +38,7 @@ const Cart = () => {
     
     try {
       await axios.put(
-        `http://localhost:5000/api/carts/${cartItemId}`,
+        `https://shopping-cart-br9a.onrender.com/api/carts/${cartItemId}`,
         { quantity: newQuantity },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -59,7 +59,7 @@ const Cart = () => {
     
     try {
       await axios.delete(
-        `http://localhost:5000/api/carts/${cartItemId}`,
+        `https://shopping-cart-br9a.onrender.com/api/carts/${cartItemId}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
 
@@ -84,7 +84,7 @@ const Cart = () => {
 
     try {
       await axios.post(
-        'http://localhost:5000/api/orders',
+        'https://shopping-cart-br9a.onrender.com/api/orders',
         { cart_id: cart._id },
         { headers: { Authorization: `Bearer ${token}` } }
       );

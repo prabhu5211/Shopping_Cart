@@ -26,7 +26,7 @@ function App() {
     
     try {
       await axios.post(
-        'http://localhost:5000/api/users/logout',
+        'https://shopping-cart-br9a.onrender.com/api/users/logout',
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );

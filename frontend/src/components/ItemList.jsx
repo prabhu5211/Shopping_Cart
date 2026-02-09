@@ -15,7 +15,7 @@ const ItemList = ({ onLogout }) => {
 
   const fetchItems = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/items');
+      const response = await axios.get('https://shopping-cart-br9a.onrender.com/api/items');
       setItems(response.data);
     } catch (error) {
       console.error('Error fetching items:', error);
@@ -33,7 +33,7 @@ const ItemList = ({ onLogout }) => {
     
     try {
       const response = await axios.post(
-        'http://localhost:5000/api/carts',
+        'https://shopping-cart-br9a.onrender.com/api/carts',
         { item_id: itemId },
         { headers: { Authorization: `Bearer ${token}` } }
       );
