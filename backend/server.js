@@ -6,7 +6,10 @@ const connectDB = require('./config/db');
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: ['http://localhost:5173', 'https://elaborate-puppy-7267b3.netlify.app'],
+  credentials: true
+}));
 app.use(express.json());
 
 // Connect to MongoDB
